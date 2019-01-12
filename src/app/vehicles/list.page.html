@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+            Vehicles
+    </ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row class="film-row">
+          <ion-col>
+              <ion-card-title class="rowTitle">Name</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Manufacturer</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Passengers</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Model</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Crew</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Cargo Capacity</ion-card-title>
+          </ion-col>
+          <ion-col>
+                <ion-card-title class="rowTitle">Max atm Speed</ion-card-title>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+      <ion-grid *ngFor="let cr of vehicles">
+          <ion-row class="film-row">
+            <ion-col>
+                <ion-card-subtitle>{{cr.name}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.manufacturer}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.passengers}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.model}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.crew}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.cargo_capacity}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.max_atmosphering_speed}}</ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+</ion-content>

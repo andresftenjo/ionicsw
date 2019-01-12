@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Films
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-grid *ngFor="let cr of films.results">
+          <ion-row class="film-row">
+            <ion-col>
+                <ion-icon name="film" slot="start"></ion-icon>{{cr.title}}
+            </ion-col>
+            <ion-col>
+                <div class="item-details">
+                    <h5>Characters:</h5>
+                    <ion-item *ngFor="let char of cr.characters" (click)="showDetail(char.id)">
+                        <div class="item-note">{{char.name}}</div>
+                    </ion-item>
+                </div>
+            </ion-col>
+            <ion-col>
+                {{cr.release_date | date}}
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+
+</ion-content>

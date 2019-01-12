@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Character Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{classroom.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-subtitle>Height: {{classroom.height}}</ion-card-subtitle>
+      <ion-card-subtitle>Gender: {{classroom.gender}}</ion-card-subtitle>
+      <ion-card-subtitle>Mass: {{classroom.mass}} Kg</ion-card-subtitle>
+      <ion-card-subtitle>Birth year: {{classroom.birth_year}}</ion-card-subtitle>
+      <ion-card-subtitle>Skin color: {{classroom.skin_color}}</ion-card-subtitle>
+      <ion-card-subtitle>Eye Color: {{classroom.eye_color}}</ion-card-subtitle>
+      
+ <!--      <ion-buttons slot="primary">
+        <ion-button (click)="edit(classroom.id)">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(classroom.id)">
+          <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

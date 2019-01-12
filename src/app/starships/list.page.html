@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Starships
+    </ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row class="film-row">
+          <ion-col>
+              <ion-card-title class="rowTitle">Name</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Manufacturer</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Passengers</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Model</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Class</ion-card-title>
+          </ion-col>
+          <ion-col>
+              <ion-card-title class="rowTitle">Hyperdrive Rating</ion-card-title>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+      <ion-grid *ngFor="let cr of starships">
+          <ion-row class="film-row">
+            <ion-col>
+                <ion-card-subtitle>{{cr.name}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.manufacturer}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.passengers}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.model}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.starship_class}}</ion-card-subtitle>
+            </ion-col>
+            <ion-col>
+                <ion-card-subtitle>{{cr.hyperdrive_rating}}</ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+</ion-content>
